@@ -1,11 +1,11 @@
 # _foo.py
-# Declares commands within a commnd group.
+# Declares commands within a command group.
 
-def foo_spec():
-  """The content contains a specificationof the foo resource to create.
+def create_spec():
+  """The content contains a specification of the foo resource to create.
 
   name: name-of-the-resource
-  xyz: something-else
+  xyz: something-else (optional; default = 123)
   """
   return [
     {'name': ''},
@@ -30,7 +30,7 @@ def load(cli):
                     help='The name of the environment',
                     default='default')
 
-  foos.add_command('create', create, content=foo_spec,
+  foos.add_command('create', create, content=create_spec,
                    help='Creates a foo resource')
 
   delete_command = foos.add_command('delete', delete, help='Deletes a foo resource')
