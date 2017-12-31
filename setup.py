@@ -27,8 +27,7 @@ setuptools.setup(
     'Framework :: Jupyter',
     'Programming Language :: Python',
     'Programming Language :: Python :: 2.7',
-    'License :: OSI Approved :: Apache Software License',
-    'Software Development :: Libraries :: Python Modules'
+    'License :: OSI Approved :: Apache Software License'
   ],
 )
 
